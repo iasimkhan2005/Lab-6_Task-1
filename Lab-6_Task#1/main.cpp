@@ -21,7 +21,8 @@ int main()
 		cout << "1. View Books" << endl;
 		cout << "2. Add Book" << endl;
 		cout << "3. Remove Book" << endl;
-		cout << "4. Exit" << endl;
+		cout << "4. Search Book" << endl;
+		cout << "5. Exit" << endl;
 		cout << "Enter Choice: ";
 
 		cin >> choice;
@@ -74,8 +75,14 @@ int main()
 				cout << "Book with serial number " << temp_serial_number << " not found!" << endl;
 			}
 			break;
+		case '4': {
+			cout << "Enter Serial Number of the Book to Search: ";
+			cin >> temp_serial_number;		
+			temp_book.searchBook(library, temp_serial_number);
+				break;
+		}
 
-		case '4':
+		case '5':
 			cout << "Exiting..." << endl;
 			break;
 		default:

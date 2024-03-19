@@ -26,7 +26,14 @@ public:
 		return false; //If no such book is found in the library
 	}
 	
-	//void searchBook(books book);
+	void searchBook(vector<books>& library,int serial_num) {
+		for (int i = 0; i < library.size(); i++) {
+			if (library[i].serial_number == serial_num) {
+				cout << library[i].book_name << endl;
+			}
+		}
+	}
+
 	
 	// Display
 	void display(vector<books>& library){

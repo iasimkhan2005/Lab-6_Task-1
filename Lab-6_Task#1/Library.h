@@ -6,6 +6,10 @@ public:
 	Library();
 	~Library();
 	vector<books> books;
+
+	void addBook(books book, books serial_number);
+	void removeBook(books serial_number);
+	void searchBook(books book);
 	
 	
 
